@@ -40,7 +40,7 @@
 
   window.fbAsyncInit = function() {
   FB.init({
-    appId      : ,
+    appId      : 1522061354777925,
     cookie     : true,  // enable cookies to allow the server to access 
                         // the session
     xfbml      : true,  // parse social plugins on this page
@@ -100,7 +100,8 @@
   the JavaScript SDK to present a graphical Login button that triggers
   the FB.login() function when clicked.
 -->
-xxxxxx
+
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button>
 
 <div id="status">
