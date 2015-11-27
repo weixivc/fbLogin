@@ -38,6 +38,14 @@
     });
   }
 
+  function logout() {
+    FB.logout(function(response) {
+        // Person is now logged out
+    });
+
+  }
+
+
   window.fbAsyncInit = function() {
   FB.init({
     appId      : 1522061354777925,
@@ -95,6 +103,7 @@
 }(document, 'script', 'facebook-jssdk'));
 </script>
 
+
 <!--
   Below we include the Login Button social plugin. This button uses
   the JavaScript SDK to present a graphical Login button that triggers
@@ -103,6 +112,9 @@
 
 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button>
+
+<button onlogin="logout();">log out
+</button>
 
 <div id="status">
 </div>
